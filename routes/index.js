@@ -1,9 +1,22 @@
 ﻿'use strict';
 var express = require('express');
+var fs = require('fs');
 var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res) {
+    res.render('index', { title: 'Express by VTS' });
+});
+
+
+
+router.get('/ATriggerVerify.txt', function (req, res) {
+    var source = fs.readFileSync('public/ATriggerVerify.txt', 'utf8');
+
+    res.send(source);
+});
+
+router.get('/trigger', function (req, res) {
 
     const webpush = require('web-push');
 
@@ -35,5 +48,4 @@ router.get('/', function (req, res) {
 
     res.render('index', { title: 'Express by VTS' });
 });
-
 module.exports = router;
