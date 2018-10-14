@@ -2,6 +2,7 @@
 var debug = require('debug');
 var express = require('express');
 var path = require('path');
+var os = require('os');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
@@ -61,5 +62,7 @@ app.use(function (err, req, res, next) {
 app.set('port', process.env.PORT || 3000);
 
 var server = app.listen(app.get('port'), function () {
-    debug('Express server listening on port ' + server.address().port);
+    console.log('os.hostname', os.hostname() )
+    console.log('process.env.host', process.env.host )
+    console.log('Express server listening on port ' + server.address().port);
 });

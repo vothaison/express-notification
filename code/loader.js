@@ -30,7 +30,7 @@ module.exports = {
                     'author': author_category_parts[1] ? author_category_parts[1] : null,
                     'title': post.find('h4').text().trim(),
                     'url': href,
-                    'string_id': post.find('h4').text().trim() + '|' + author_category,
+                    'string_id': post.find('h4').text().trim() + '|' + author_category + '|' + href,
                     'viewed': false
                 };
             }
