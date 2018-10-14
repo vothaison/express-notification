@@ -112,7 +112,12 @@ router.get('/trigger_notification', async function (req, res) {
         });
     });
 
-    var storedList = JSON.parse(JSON.parse(storedData).Fit.Json).List;
+    var fit = JSON.parse(storedData).Fit;
+    var storedList = [];
+    if (fit) {
+        storedList = JSON.parse(fit.Json).List;
+    }
+
 
     console.log(HASH);
     console.log('Fetch new data from official fit.sgu.edu.vn', `(${settings.fitUrl})`);
