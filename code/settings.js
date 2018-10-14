@@ -15,7 +15,7 @@ module.exports = {
                 fitUrl: 'http://fit.sgu.edu.vn/web2017/',
                 saveUrl: 'https://paper-by-vts.000webhostapp.com/Bridge/save_fit_json',
                 getUrl: 'https://paper-by-vts.000webhostapp.com/Bridge/get_latest_fit_json',
-                getNotificationSubscriptionsUrl: 'https://paper-by-vts.000webhostapp.com/DataBridge/list_subscription',
+                getNotificationSubscriptionsUrl: 'https://paper-by-vts.000webhostapp.com/Bridge/list_subscription',
             };
         }
     }
