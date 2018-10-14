@@ -127,7 +127,7 @@ router.get('/trigger_notification', async function (req, res) {
 
             } else {
                 console.log('ERROR', error, body);
-                res.send(`ERROR loading  ${settings.fitUrl}  ${JSON.stringify(error)}`);
+                res.send(`ERROR loading  ${settings.fitUrl}  ${JSON.stringify(error)} ${JSON.stringify(response)} ${JSON.stringify(body)}`);
                 reject(error);
             }
         });
